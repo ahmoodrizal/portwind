@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Portfolio</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./dist/css/final.css">
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body>
@@ -27,31 +35,46 @@
                     </button>
 
                     <nav id="nav-menu"
-                        class="hidden lg:block lg:static lg:bg-transparent lg:max-w-full absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:shadow-none lg:rounded-none">
+                        class="hidden lg:block lg:static lg:bg-transparent lg:max-w-full absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:shadow-none lg:rounded-none dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-300">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#hero">Home</a>
                             </li>
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#about">About</a>
                             </li>
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#portfolio">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#client">Client</a>
                             </li>
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#blog">Blog</a>
                             </li>
                             <li class="group">
-                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                <a class="flex py-2 mx-8 text-base dark:text-white text-dark group-hover:text-primary"
                                     href="#contact">Contact</a>
+                            </li>
+                            <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex items-center h-5 p-1 rounded-full cursor-pointer w-9 bg-slate-500">
+                                            <div
+                                                class="w-4 h-4 transition duration-300 ease-in-out bg-white rounded-full toggle-circle">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -62,20 +85,21 @@
     <!-- Navbar header End -->
 
     <!-- Hero Section Start-->
-    <section id="hero" class="pt-36">
+    <section id="hero" class="pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="self-center w-full px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold lg:text-xl text-primary">Hi everyone, Greetings From
-                        <span class="block mt-1 text-4xl font-bold lg:text-5xl text-dark">Ahmad Rizal Imaduddin</span>
+                    <h1 class="text-base font-semibold lg:text-xl text-primary">Hi everyone 🖐️, Greetings From
+                        <span class="block mt-1 text-4xl font-bold lg:text-5xl dark:text-white text-dark">Ahmad Rizal
+                            Imaduddin</span>
                     </h1>
                     <h2 class="mb-5 text-lg font-medium lg:text-2xl text-secondary">Back-End & <span
-                            class="text-dark">Mobile
+                            class="text-dark dark:text-white">Mobile
                             Developer</span>
                     </h2>
                     <p class="mb-10 font-medium leading-relaxed text-slate-400">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, <span
-                            class="font-semibold text-dark">quisquam!</span>
+                            class="font-semibold text-dark dark:text-white">quisquam!</span>
                     </p>
                     <a href="#"
                         class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-lg bg-primary hover:shadow-lg hover:opacity-80">Find
@@ -84,8 +108,8 @@
                 </div>
                 <div class="self-end w-full px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-0 lg:right-0">
-                        <img class="max-w-full mx-auto " src="dist/img/a2rmbg.png" alt="rizal">
-                        <span class="absolute -translate-x-1/2 lg:scale-150 -bottom-20 -z-10 left-1/2">
+                        <img class="relative z-10 max-w-full mx-auto " src="dist/img/a2rmbg.png" alt="rizal">
+                        <span class="absolute -translate-x-1/2 lg:scale-150 -bottom-20 left-1/2">
                             <svg width="450" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#14b8a6"
                                     d="M43.4,-21C48.8,2.5,40.6,23.5,21.8,39.4C3.1,55.2,-26.3,65.8,-45.4,53.9C-64.6,42,-73.6,7.6,-64.3,-21.2C-55,-50,-27.5,-73.2,-4.3,-71.8C19,-70.4,38,-44.5,43.4,-21Z"
@@ -100,12 +124,13 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pb-32 pt-36 ">
+    <section id="about" class="pb-32 pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="mb-3 font-bold uppercase text-primary">About Me</h4>
-                    <h2 class="max-w-md mb-5 text-3xl font-bold lg:text-4xl text-dark">Lorem ipsum, dolor sit amet
+                    <h2 class="max-w-md mb-5 text-3xl font-bold lg:text-4xl text-dark dark:text-white">Lorem ipsum,
+                        dolor sit amet
                         consectetur
                         adipisicing.
                     </h2>
@@ -117,7 +142,8 @@
                     </p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl text-dark">Connect with me</h3>
+                    <h3 class="mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl text-dark dark:text-white">Connect with
+                        me</h3>
                     <p class="mb-6 text-base font-medium lg:text-xl text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia delectus sit earum temporibus
                         sapiente, laboriosam recusandae sint sed corporis, omnis quia ab quam aliquid, vitae sequi
@@ -182,12 +208,13 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pb-16 pt-36 bg-slate-100">
+    <section id="portfolio" class="pb-16 pt-36 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto mb-16 text-center">
                     <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">Latest Project</h2>
+                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">Latest Project
+                    </h2>
                     <p class="text-lg font-medium md:text-lg text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deleniti illum earum
                         recusandae unde modi tempora porro quam!
@@ -199,7 +226,7 @@
                     <div class="overflow-hidden rounded-md shadow-md">
                         <img src="dist/img/p1.png" alt="p1" width="w-full">
                     </div>
-                    <h3 class="mt-5 text-xl font-semibold text-dark">Vite</h3>
+                    <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">Vite</h3>
                     <p class="text-base font-medium text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
                         ipsa commodi sapiente.
@@ -209,7 +236,7 @@
                     <div class="overflow-hidden rounded-md shadow-md">
                         <img src="dist/img/p2.png" alt="p1" width="w-full">
                     </div>
-                    <h3 class="mt-5 text-xl font-semibold text-dark">Alpine Js</h3>
+                    <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">Alpine Js</h3>
                     <p class="text-base font-medium text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
                         ipsa commodi sapiente.
@@ -219,7 +246,7 @@
                     <div class="overflow-hidden rounded-md shadow-md">
                         <img src="dist/img/p3.png" alt="p1" width="w-full">
                     </div>
-                    <h3 class="mt-5 text-xl font-semibold text-dark">Remix</h3>
+                    <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">Remix</h3>
                     <p class="text-base font-medium text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
                         ipsa commodi sapiente.
@@ -229,7 +256,7 @@
                     <div class="overflow-hidden rounded-md shadow-md">
                         <img src="dist/img/p4.png" alt="p1" width="w-full">
                     </div>
-                    <h3 class="mt-5 text-xl font-semibold text-dark">Splade</h3>
+                    <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">Splade</h3>
                     <p class="text-base font-medium text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
                         ipsa commodi sapiente.
@@ -241,12 +268,13 @@
     <!-- Portfolio Section End -->
 
     <!-- Client Section Start -->
-    <section id="client" class="pb-32 pt-36 bg-slate-800">
+    <section id="client" class="pb-32 pt-36 bg-slate-800 dark:bg-slate-300">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto mb-16 text-center">
                     <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Our Recent Clients</h2>
+                    <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl dark:text-dark">Our Recent
+                        Clients</h2>
                     <p class="text-lg font-medium md:text-lg text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deleniti illum earum
                         recusandae unde modi tempora porro quam!
@@ -278,12 +306,13 @@
     <!-- Client Section End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="pb-32 pt-36 bg-slate-100">
+    <section id="blog" class="pb-32 pt-36 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto mb-16 text-center">
                     <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">Recent Article</h2>
+                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">Recent Article
+                    </h2>
                     <p class="text-lg font-medium md:text-lg text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores in exercitationem
                         eligendi dolor.
@@ -292,10 +321,12 @@
             </div>
             <div class="flex flex-wrap">
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg dark:bg-slate-800 rounded-xl">
                         <img src="https://source.unsplash.com/360x200?technology" class="w-full" alt="">
                         <div class="px-6 py-8">
-                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Learn something
+                            <h3
+                                class="mb-3 text-xl font-semibold truncate text-dark dark:text-white hover:text-primary">
+                                Learn something
                             </h3>
                             <p class="mb-4 text-base font-medium text-secondary">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus?
@@ -306,10 +337,12 @@
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg dark:bg-slate-800 rounded-xl">
                         <img src="https://source.unsplash.com/360x200?japan" class="w-full" alt="">
                         <div class="px-6 py-8">
-                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Travel to Japan
+                            <h3
+                                class="mb-3 text-xl font-semibold truncate dark:text-white text-dark hover:text-primary">
+                                Travel to Japan
                             </h3>
                             <p class="mb-4 text-base font-medium text-secondary">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, modi exercitationem
@@ -321,10 +354,12 @@
                     </div>
                 </div>
                 <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg dark:bg-slate-800 rounded-xl">
                         <img src="https://source.unsplash.com/360x200?coffee" class="w-full" alt="">
                         <div class="px-6 py-8">
-                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Coffee Story
+                            <h3
+                                class="mb-3 text-xl font-semibold truncate dark:text-white text-dark hover:text-primary">
+                                Coffee Story
                             </h3>
                             <p class="mb-4 text-base font-medium text-secondary">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptas earum reiciendis
@@ -341,12 +376,13 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pb-32 pt-36">
+    <section id="contact" class="pb-32 pt-36 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto mb-16 text-center">
                     <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">How to reach me</h2>
+                    <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">How to reach
+                        me</h2>
                     <p class="text-lg font-medium md:text-lg text-secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores in exercitationem
                         eligendi dolor.
@@ -391,6 +427,7 @@
                     <p>Jl.Ir.H Juanda No.21A</p>
                     <p>Bandung</p>
                 </div>
+                <!-- Category -->
                 <div class="w-full px-4 mb-12 font-mediumm md:w-1/3">
                     <h3 class="mb-5 text-xl font-semibold text-white">
                         Article Category
@@ -416,6 +453,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Links -->
                 <div class="w-full px-4 mb-12 font-mediumm md:w-1/3">
                     <h3 class="mb-5 text-xl font-semibold text-white">
                         Link
@@ -500,6 +538,13 @@
         </div>
     </section>
     <!-- Footer Section End -->
+
+    <!-- Back To Top Buttion Start -->
+    <a href="#hero" id="to-top"
+        class=" hidden items-center justify-center h-14 w-14 bg-primary rounded-full fixed z-[9999] bottom-4 right-4 p-4">
+        <span class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2 hover:animate-pulse"></span>
+    </a>
+    <!-- Back To Top Buttion End -->
 
     <script src="dist/js/script.js"></script>
 </body>
