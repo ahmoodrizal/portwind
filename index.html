@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Portfolio</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body>
+    <!-- Navbar header Start -->
+    <header class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent">
+        <div class="container">
+            <div class="relative flex items-center justify-between">
+                <!-- Logo -->
+                <div class="px-4">
+                    <a class="block py-6 text-lg font-bold text-primary" href="#hero">ahmoodrizal</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="flex items-center p-4">
+                    <button class="absolute block right-4 lg:hidden" id="hamburger" name="hamburger" type="button">
+                        <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span>
+                        <span class="transition duration-300 ease-in-out hamburger-line"></span>
+                        <span class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"></span>
+                    </button>
+
+                    <nav id="nav-menu"
+                        class="hidden lg:block lg:static lg:bg-transparent lg:max-w-full absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#hero">Home</a>
+                            </li>
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#about">About</a>
+                            </li>
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#client">Client</a>
+                            </li>
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#blog">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a class="flex py-2 mx-8 text-base text-dark group-hover:text-primary"
+                                    href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar header End -->
+
+    <!-- Hero Section Start-->
+    <section id="hero" class="pt-36">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="self-center w-full px-4 lg:w-1/2">
+                    <h1 class="text-base font-semibold lg:text-xl text-primary">Hi everyone, Greetings From
+                        <span class="block mt-1 text-4xl font-bold lg:text-5xl text-dark">Ahmad Rizal Imaduddin</span>
+                    </h1>
+                    <h2 class="mb-5 text-lg font-medium lg:text-2xl text-secondary">Back-End & <span
+                            class="text-dark">Mobile
+                            Developer</span>
+                    </h2>
+                    <p class="mb-10 font-medium leading-relaxed text-slate-400">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, <span
+                            class="font-semibold text-dark">quisquam!</span>
+                    </p>
+                    <a href="#"
+                        class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-lg bg-primary hover:shadow-lg hover:opacity-80">Find
+                        Me
+                    </a>
+                </div>
+                <div class="self-end w-full px-4 lg:w-1/2">
+                    <div class="relative mt-10 lg:mt-0 lg:right-0">
+                        <img class="max-w-full mx-auto " src="dist/img/a2rmbg.png" alt="rizal">
+                        <span class="absolute -translate-x-1/2 lg:scale-150 -bottom-20 -z-10 left-1/2">
+                            <svg width="450" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#14b8a6"
+                                    d="M43.4,-21C48.8,2.5,40.6,23.5,21.8,39.4C3.1,55.2,-26.3,65.8,-45.4,53.9C-64.6,42,-73.6,7.6,-64.3,-21.2C-55,-50,-27.5,-73.2,-4.3,-71.8C19,-70.4,38,-44.5,43.4,-21Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pb-32 pt-36 ">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 lg:w-1/2">
+                    <h4 class="mb-3 font-bold uppercase text-primary">About Me</h4>
+                    <h2 class="max-w-md mb-5 text-3xl font-bold lg:text-4xl text-dark">Lorem ipsum, dolor sit amet
+                        consectetur
+                        adipisicing.
+                    </h2>
+                    <p class="max-w-xl text-base font-medium lg:text-xl text-secondary">Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing
+                        elit. Excepturi, ullam illo rerum veritatis
+                        tempora laborum aliquid.
+                    </p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="mb-4 text-2xl font-semibold lg:pt-10 lg:text-3xl text-dark">Connect with me</h3>
+                    <p class="mb-6 text-base font-medium lg:text-xl text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia delectus sit earum temporibus
+                        sapiente, laboriosam recusandae sint sed corporis, omnis quia ab quam aliquid, vitae sequi
+                        corrupti error adipisci qui veritatis hic.
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Youtube -->
+                        <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                            href="#" target="_blank">
+                            <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>X</title>
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <!-- Github -->
+                        <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                            href="#" target="_blank">
+                            <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>GitHub</title>
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                            href="#" target="_blank">
+                            <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>LinkedIn</title>
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <!-- Notion -->
+                        <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                            href="#" target="_blank">
+                            <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Notion</title>
+                                <path
+                                    d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+                            </svg>
+                        </a>
+                        <!-- Youtube -->
+                        <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                            href="#" target="_blank">
+                            <svg class="fill-current" width="25" role="img" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>YouTube</title>
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="pb-16 pt-36 bg-slate-100">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto mb-16 text-center">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">Latest Project</h2>
+                    <p class="text-lg font-medium md:text-lg text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deleniti illum earum
+                        recusandae unde modi tempora porro quam!
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center w-full px-4 xl:w-10/12 xl:mx-auto">
+                <div class="p-4 mb-12 md:w-1/2">
+                    <div class="overflow-hidden rounded-md shadow-md">
+                        <img src="dist/img/p1.png" alt="p1" width="w-full">
+                    </div>
+                    <h3 class="mt-5 text-xl font-semibold text-dark">Vite</h3>
+                    <p class="text-base font-medium text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
+                        ipsa commodi sapiente.
+                    </p>
+                </div>
+                <div class="p-4 mb-12 md:w-1/2">
+                    <div class="overflow-hidden rounded-md shadow-md">
+                        <img src="dist/img/p2.png" alt="p1" width="w-full">
+                    </div>
+                    <h3 class="mt-5 text-xl font-semibold text-dark">Alpine Js</h3>
+                    <p class="text-base font-medium text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
+                        ipsa commodi sapiente.
+                    </p>
+                </div>
+                <div class="p-4 mb-12 md:w-1/2">
+                    <div class="overflow-hidden rounded-md shadow-md">
+                        <img src="dist/img/p3.png" alt="p1" width="w-full">
+                    </div>
+                    <h3 class="mt-5 text-xl font-semibold text-dark">Remix</h3>
+                    <p class="text-base font-medium text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
+                        ipsa commodi sapiente.
+                    </p>
+                </div>
+                <div class="p-4 mb-12 md:w-1/2">
+                    <div class="overflow-hidden rounded-md shadow-md">
+                        <img src="dist/img/p4.png" alt="p1" width="w-full">
+                    </div>
+                    <h3 class="mt-5 text-xl font-semibold text-dark">Splade</h3>
+                    <p class="text-base font-medium text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsam corporis enim, vel
+                        ipsa commodi sapiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Client Section Start -->
+    <section id="client" class="pb-32 pt-36 bg-slate-800">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto mb-16 text-center">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
+                    <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Our Recent Clients</h2>
+                    <p class="text-lg font-medium md:text-lg text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deleniti illum earum
+                        recusandae unde modi tempora porro quam!
+                    </p>
+                </div>
+            </div>
+            <div class="w-full px-4">
+                <div class="flex flex-wrap items-center justify-center">
+                    <a href="#"
+                        class="max-w-[120px] md:max-w-[140px] lg:mx-6 xl:mx-8 mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                        <img src="dist/img/msft.svg" alt="microsoft">
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] md:max-w-[140px] lg:mx-6 xl:mx-8 mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                        <img src="dist/img/eth.svg" alt="Ethereum">
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] md:max-w-[140px] lg:mx-6 xl:mx-8 mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                        <img src="dist/img/frbs.svg" alt="Forbes">
+                    </a>
+                    <a href="#"
+                        class="max-w-[120px] md:max-w-[140px] lg:mx-6 xl:mx-8 mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                        <img src="dist/img/sptfy.svg" alt="Spotify">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="blog" class="pb-32 pt-36 bg-slate-100">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto mb-16 text-center">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
+                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">Recent Article</h2>
+                    <p class="text-lg font-medium md:text-lg text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores in exercitationem
+                        eligendi dolor.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                        <img src="https://source.unsplash.com/360x200?technology" class="w-full" alt="">
+                        <div class="px-6 py-8">
+                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Learn something
+                            </h3>
+                            <p class="mb-4 text-base font-medium text-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatibus?
+                            </p>
+                            <a class="px-4 py-2 mb-6 text-sm font-medium text-white rounded-md bg-primary hover:opacity-80"
+                                href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                        <img src="https://source.unsplash.com/360x200?japan" class="w-full" alt="">
+                        <div class="px-6 py-8">
+                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Travel to Japan
+                            </h3>
+                            <p class="mb-4 text-base font-medium text-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, modi exercitationem
+                                velit mollitia officiis maiores iste repellat amet sed beatae. Inventore, pariatur!
+                            </p>
+                            <a class="px-4 py-2 mb-6 text-sm font-medium text-white rounded-md bg-primary hover:opacity-80"
+                                href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl">
+                        <img src="https://source.unsplash.com/360x200?coffee" class="w-full" alt="">
+                        <div class="px-6 py-8">
+                            <h3 class="mb-3 text-xl font-semibold truncate text-dark hover:text-primary">Coffee Story
+                            </h3>
+                            <p class="mb-4 text-base font-medium text-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptas earum reiciendis
+                                vel quo autem voluptates sapiente praesentium deleniti?
+                            </p>
+                            <a class="px-4 py-2 mb-6 text-sm font-medium text-white rounded-md bg-primary hover:opacity-80"
+                                href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="pb-32 pt-36">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto mb-16 text-center">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
+                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">How to reach me</h2>
+                    <p class="text-lg font-medium md:text-lg text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores in exercitationem
+                        eligendi dolor.
+                    </p>
+                </div>
+            </div>
+            <form>
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base font-bold text-primary">Name</label>
+                        <input type="text" id="name"
+                            class="w-full p-3 mt-1 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base font-bold text-primary">Email</label>
+                        <input type="text" id="email"
+                            class="w-full p-3 mt-1 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="message" class="text-base font-bold text-primary">Message</label>
+                        <textarea type="text" id="message"
+                            class="w-full p-3 mt-1 rounded-md bg-slate-200 text-dark focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"></textarea></textarea>
+                    </div>
+                    <div class="w-full px-4">
+                        <button
+                            class="w-full px-8 py-3 text-base font-semibold text-white transition duration-500 rounded-full bg-primary hover:opacity-80 hover:shadow-lg">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+    <section id="footer" class="pt-24 pb-12 bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 font-mediumm md:w-1/3 text-slate-300">
+                    <h2 class="mb-5 text-4xl font-bold text-white">Ahmoodrzl</h2>
+                    <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
+                    <p>ahmoodrzl@center.co.id</p>
+                    <p>Jl.Ir.H Juanda No.21A</p>
+                    <p>Bandung</p>
+                </div>
+                <div class="w-full px-4 mb-12 font-mediumm md:w-1/3">
+                    <h3 class="mb-5 text-xl font-semibold text-white">
+                        Article Category
+                    </h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Programming</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Coffee</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Travel</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Games</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Movie</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#">Japan</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 font-mediumm md:w-1/3">
+                    <h3 class="mb-5 text-xl font-semibold text-white">
+                        Link
+                    </h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#hero">Home</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#about">About Me</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#client">Clients</a>
+                        </li>
+                        <li>
+                            <a class="inline-block text-base hover:text-primary" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full pt-10 border-t border-slate-800">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- Youtube -->
+                    <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                        href="#" target="_blank">
+                        <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>X</title>
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </a>
+                    <!-- Github -->
+                    <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                        href="#" target="_blank">
+                        <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>GitHub</title>
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                        href="#" target="_blank">
+                        <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>LinkedIn</title>
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <!-- Notion -->
+                    <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                        href="#" target="_blank">
+                        <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Notion</title>
+                            <path
+                                d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+                        </svg>
+                    </a>
+                    <!-- Youtube -->
+                    <a class="flex items-center justify-center mr-4 border rounded-full text-slate-300 hover:text-white hover:border-primary hover:bg-primary border-slate-300 w-9 h-9"
+                        href="#" target="_blank">
+                        <svg class="fill-current" width="25" role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>YouTube</title>
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-xs font-medium text-center text-slate-500">Made with <span
+                        class="text-pink-500">❤️</span> By <a href="#" target="_blank"
+                        class="text-primary">ahmoodrizal</a> with <span class="text-sky-500">Tailwind CSS</span></p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
